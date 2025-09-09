@@ -1,11 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "redirects": [
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/pricing", "destination": "/pricing.html" },
-    { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/services", "destination": "/services/index.html" },
-    { "source": "/services/:page", "destination": "/:page.html" }
-  ]
+  "trailingSlash": false
 }
