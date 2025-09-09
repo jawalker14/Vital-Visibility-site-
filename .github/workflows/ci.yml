@@ -1,0 +1,26 @@
+name: CI
+on:
+  push:
+    branches: [ main, "harden/*" ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npx playwright install --with-deps
+      - run: npm run test:e2e
+      - name: Lighthouse audit (budgets)
+        run: |
+          npm run build
+          npm run preview &
+          for i in {1..30}; do curl -sf http://localhost:5173 && break || sleep 2; done
+          LH_URL=http://localhost:5173 npm run audit:lighthouse

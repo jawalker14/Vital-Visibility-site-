@@ -1,0 +1,24 @@
+{
+  "name": "vital-visibility-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marketing site for South African healthcare professionals.",
+  "scripts": {
+    "lint": "eslint . && stylelint '**/*.{css,scss}' && htmlhint '**/*.html'",
+    "format": "prettier -w .",
+    "test:e2e": "playwright test",
+    "audit:lighthouse": "node ./scripts/lighthouse.mjs",
+    "start": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "htmlhint": "^1.1.4",
+    "lighthouse": "^11.0.0",
+    "playwright": "^1.43.0",
+    "prettier": "^3.0.0",
+    "stylelint": "^15.0.0",
+    "vite": "^5.0.0",
+    "zod": "^3.22.0"
+  }
+}
