@@ -14,13 +14,19 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm ci
+      # Use npm install since no lockfile is committed
+      - run: npm install
       - run: npm run lint
-      - run: npx playwright install --with-deps
-      - run: npm run test:e2e
+      - name: Build site
+        run: npm run build
+      # Run heavier checks only on pull requests
+      - if: ${{ github.event_name == 'pull_request' }}
+        run: npx playwright install --with-deps
+      - if: ${{ github.event_name == 'pull_request' }}
+        run: npm run test:e2e
       - name: Lighthouse audit (budgets)
+        if: ${{ github.event_name == 'pull_request' }}
         run: |
-          npm run build
           npm run preview &
           for i in {1..30}; do curl -sf http://localhost:5173 && break || sleep 2; done
           LH_URL=http://localhost:5173 npm run audit:lighthouse

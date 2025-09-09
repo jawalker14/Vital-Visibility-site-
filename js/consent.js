@@ -3,7 +3,8 @@
   const dnt = navigator.doNotTrack === '1' || window.doNotTrack === '1';
 
   function setConsent(val) {
-    try { localStorage.setItem(LS_KEY, JSON.stringify({ v: 1, consent: val, t: Date.now() })); } catch {}
+    try { localStorage.setItem(LS_KEY, JSON.stringify({ v: 1, consent: val, t: Date.now() })); }
+    catch (e) { return; }
   }
   function getConsent() {
     try {
