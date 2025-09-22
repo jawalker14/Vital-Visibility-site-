@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
   const captchaInput = document.getElementById('captchaToken');
   const tsMeta = document.querySelector('meta[name="turnstile-site-key"]');
   const tsSiteKey = tsMeta && tsMeta.content ? tsMeta.content.trim() : '';
   if (!form) return;
 
+  // Initialize enhanced validation
+  const validator = new window.ContactFormValidator(form);
+
   function show(msg, ok = true) {
-    if (!status) return;
-    status.textContent = msg;
-    status.style.color = ok ? 'var(--color-green)' : 'var(--color-red)';
+    validator.showStatus(msg, ok);
   }
 
   // Initialize Cloudflare Turnstile if site key provided and API available
@@ -40,19 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    
+    // Use enhanced validation
+    if (!validator.validateForm()) {
+      return;
+    }
+    
     const fd = new FormData(form);
-    if (!fd.get('consent')) {
-      show('Please provide consent to proceed.', false);
-      return;
-    }
-    // simple client-side checks
-    const name = (fd.get('name') || '').toString().trim();
-    const email = (fd.get('email') || '').toString().trim();
-    const message = (fd.get('message') || '').toString().trim();
-    if (name.length < 2 || !email.includes('@') || message.length < 10) {
-      show('Please complete all required fields correctly.', false);
-      return;
-    }
+    
     // Require captcha if enabled
     if (tsSiteKey && (!captchaInput || !captchaInput.value)) {
       show('Please complete the verification.', false);
