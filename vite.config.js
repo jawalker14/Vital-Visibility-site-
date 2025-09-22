@@ -29,5 +29,11 @@ export default defineConfig({
       },
     },
   },
+  publicDir: 'public',
+  server: {
+    fs: {
+      allow: ['..']
+    }
+  }
 });
 
