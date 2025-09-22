@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     const fd = new FormData(form);
     if (!fd.get('consent')) {
-      show('Please provide consent to proceed.', false);
+      show('Please complete', false);
       return;
     }
     // simple client-side checks
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = (fd.get('email') || '').toString().trim();
     const message = (fd.get('message') || '').toString().trim();
     if (name.length < 2 || !email.includes('@') || message.length < 10) {
-      show('Please complete all required fields correctly.', false);
+      show('Please complete', false);
       return;
     }
     // Require captcha if enabled
