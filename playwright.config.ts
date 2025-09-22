@@ -13,7 +13,7 @@ export default defineConfig({
     {
       command: 'vite build && vite preview --port 5173',
       port: 5173,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: true, // Allow reusing existing server
       timeout: 120000 // Increase timeout for build
     }
   ],

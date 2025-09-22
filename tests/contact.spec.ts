@@ -6,7 +6,7 @@ test('contact form client validation', async ({ page }) => {
   // Wait for the form to be ready
   await page.waitForLoadState('networkidle');
   
-  // Ensure the form is present (but don't require form-status to be visible yet)
+  // Ensure the form is present
   await expect(page.locator('#contact-form')).toBeVisible();
   
   // First validation check - submit empty form
