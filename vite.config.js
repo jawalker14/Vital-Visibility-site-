@@ -1,9 +1,51 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import fs from 'fs';
+import path from 'path';
 
 // Configure Vite to build a multi-page static site.
 // Each HTML page is an entry so it gets emitted to dist/.
 export default defineConfig({
+  appType: 'mpa',
+  plugins: [
+    {
+      name: 'custom-404-handler',
+      configurePreviewServer(server) {
+        // Add a fallback handler for 404 errors
+        server.middlewares.use((req, res, next) => {
+          const url = req.url || '';
+          
+          // Skip if this is a request for existing static files or API routes
+          if (url.startsWith('/css/') || url.startsWith('/js/') || url.startsWith('/images/') || 
+              url.startsWith('/api/') || url.includes('.') || url === '/') {
+            return next();
+          }
+          
+          // Check if this is a known route that has a corresponding HTML file
+          const knownRoutes = [
+            '/about', '/contact', '/pricing', '/privacy', '/terms', 
+            '/services', '/contact-success', '/404'
+          ];
+          
+          if (knownRoutes.some(route => url.startsWith(route))) {
+            return next();
+          }
+          
+          // This is likely a 404 - serve the 404.html content with 404 status
+          const notFoundPath = path.resolve(__dirname, 'dist/404.html');
+          if (fs.existsSync(notFoundPath)) {
+            const content = fs.readFileSync(notFoundPath, 'utf-8');
+            res.statusCode = 404;
+            res.setHeader('Content-Type', 'text/html');
+            res.end(content);
+            return;
+          }
+          
+          next();
+        });
+      }
+    }
+  ],
   build: {
     rollupOptions: {
       input: {
