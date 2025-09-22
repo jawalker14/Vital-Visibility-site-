@@ -12,15 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mark active nav link with aria-current
   const links = document.querySelectorAll('.site-nav a');
-  const path = window.location.pathname.replace(/index\.html$/, '/');
+  const norm = (s) => {
+    if (!s) return '';
+    try {
+      const u = new URL(s, window.location.origin);
+      let p = u.pathname;
+      if (p.length > 1 && p.endsWith('/')) p = p.slice(0, -1);
+      return p;
+    } catch { return s; }
+  };
+  const path = norm(window.location.pathname);
   links.forEach((a) => {
     const href = a.getAttribute('href');
     if (!href) return;
-    if (href === 'index.html' && (path === '/' || path.endsWith('/index.html'))) {
-      a.setAttribute('aria-current', 'page');
-    } else if (href && path.endsWith(href)) {
-      a.setAttribute('aria-current', 'page');
-    }
+    const hp = norm(href);
+    if (path === hp) a.setAttribute('aria-current', 'page');
   });
 });
 
