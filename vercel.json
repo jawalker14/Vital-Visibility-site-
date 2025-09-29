@@ -1,19 +1,12 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/services",  "destination": "/services/index.html" },
-    { "source": "/services/", "destination": "/services/index.html" },
-    { "source": "/resources",  "destination": "/resources/index.html" },
-    { "source": "/resources/", "destination": "/resources/index.html" }
-  ],
   "redirects": [
-    { "source": "/about",    "destination": "/about.html",    "permanent": false },
-    { "source": "/pricing",  "destination": "/pricing.html",  "permanent": false },
-    { "source": "/contact",  "destination": "/contact.html",  "permanent": false },
-    { "source": "/privacy",  "destination": "/privacy.html",  "permanent": false },
-    { "source": "/terms",    "destination": "/terms.html",    "permanent": false },
-    { "source": "/services.html", "destination": "/services/index.html", "permanent": true },
+    { "source": "/about.html",    "destination": "/about/",    "permanent": true },
+    { "source": "/pricing.html",  "destination": "/pricing/",  "permanent": true },
+    { "source": "/contact.html",  "destination": "/contact/",  "permanent": true },
+    { "source": "/services.html", "destination": "/services/", "permanent": true },
+    { "source": "/resources",     "destination": "/resources/", "permanent": false },
     { "source": "/contact-success", "destination": "/contact-success.html", "permanent": false }
   ]
 }
