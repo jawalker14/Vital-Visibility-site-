@@ -4,6 +4,8 @@ import { resolve } from 'path';
 // Configure Vite to build a multi-page static site.
 // Each HTML page is an entry so it gets emitted to dist/.
 export default defineConfig({
+  // Treat this as a Multi-Page App so unknown routes return 404 instead of falling back to index.html
+  appType: 'mpa',
   build: {
     rollupOptions: {
       input: {
