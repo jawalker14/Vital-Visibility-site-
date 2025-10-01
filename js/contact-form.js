@@ -69,7 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       const j = await r.json();
       if (j.ok) {
-        window.location.href = '/contact-success.html';
+        // Inline success UX instead of redirect
+        form.reset();
+        if (captchaInput) captchaInput.value = '';
+        show('Thanks! Your message has been sent. We\'ll be in touch soon.');
+        status && status.focus && status.focus();
       } else {
         show(j.error || 'Submission failed. Please try again later.', false);
       }

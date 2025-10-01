@@ -10,13 +10,13 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'about.html'),
-        contact: resolve(__dirname, 'contact.html'),
         contactSuccess: resolve(__dirname, 'contact-success.html'),
-        pricing: resolve(__dirname, 'pricing.html'),
+  // Use directory index pages for primary sections
+  aboutIndex: resolve(__dirname, 'about/index.html'),
+  contactIndex: resolve(__dirname, 'contact/index.html'),
+  pricingIndex: resolve(__dirname, 'pricing/index.html'),
         privacy: resolve(__dirname, 'privacy.html'),
         terms: resolve(__dirname, 'terms.html'),
-        servicesRoot: resolve(__dirname, 'services.html'),
         servicesIndex: resolve(__dirname, 'services/index.html'),
         servicesWebsites: resolve(__dirname, 'services/websites.html'),
         servicesMaintenance: resolve(__dirname, 'services/maintenance.html'),
