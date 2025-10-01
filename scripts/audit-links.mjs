@@ -37,15 +37,33 @@ for (const f of files) {
   for (const h of hrefs) {
     if (ASSET_OK.some(rx => rx.test(h))) continue;
     if (h.startsWith('/')) {
-      // extensionless absolute path
-      if (!/\.(html|css|js|png|jpg|jpeg|webp|svg|ico|pdf)(#|\?|$)/i.test(h) && !h.endsWith('/')) {
-        console.log(`[EXTENSIONLESS ABS] ${f} -> ${h}`);
-        issues++;
-      }
-      if (/\/$/.test(h) && !/\/(#|\?|$)/.test(h)) {
-        // trailing slash path likely to redirect
-        console.log(`[TRAILING-SLASH ABS] ${f} -> ${h}`);
-        issues++;
+      // Absolute paths without an explicit extension
+      const hasExt = /\.(html|css|js|png|jpg|jpeg|webp|svg|ico|pdf)(#|\?|$)/i.test(h);
+      if (!hasExt) {
+        if (h.endsWith('/')) {
+          // Allow folder-style links only if matching directory with index.html exists
+          const dir = h.replace(/^\//, '').replace(/\/$/, '');
+          const idx = join(ROOT, dir, 'index.html');
+          try {
+            // eslint-disable-next-line no-unused-expressions
+            readFileSync(idx);
+          } catch {
+            console.log(`[TRAILING-SLASH NO-INDEX] ${f} -> ${h} (missing ${idx})`);
+            issues++;
+          }
+        } else {
+          // Bare extensionless absolute path like /about
+          const dir = h.replace(/^\//, '');
+          const asDir = join(ROOT, dir, 'index.html');
+          const asHtml = join(ROOT, `${dir}.html`);
+          let ok = false;
+          try { readFileSync(asDir); ok = true; } catch {}
+          if (!ok) { try { readFileSync(asHtml); ok = true; } catch {} }
+          if (!ok) {
+            console.log(`[EXTENSIONLESS ABS] ${f} -> ${h} (no ${asDir} or ${asHtml})`);
+            issues++;
+          }
+        }
       }
     }
   }
