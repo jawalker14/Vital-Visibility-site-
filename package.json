@@ -5,6 +5,7 @@
   "description": "Marketing site for South African healthcare professionals.",
   "scripts": {
     "lint": "eslint . && stylelint '**/*.{css,scss}' && htmlhint '**/*.html'",
+  "audit:links": "node ./scripts/audit-links.mjs",
     "format": "prettier -w .",
     "test:e2e": "playwright test",
     "audit:lighthouse": "node ./scripts/lighthouse.mjs",
