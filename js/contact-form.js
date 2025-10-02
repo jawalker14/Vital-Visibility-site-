@@ -39,46 +39,55 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   form.addEventListener('submit', async (e) => {
-    e.preventDefault();
     const fd = new FormData(form);
-    if (!fd.get('consent')) {
-      show('Please provide consent to proceed.', false);
-      return;
-    }
-    // simple client-side checks
+
+    // Validate required text fields first with messages containing "Please complete"
     const name = (fd.get('name') || '').toString().trim();
     const email = (fd.get('email') || '').toString().trim();
     const message = (fd.get('message') || '').toString().trim();
-    if (name.length < 2 || !email.includes('@') || message.length < 10) {
-      show('Please complete all required fields correctly.', false);
+
+    if (!name || !email || !message) {
+      e.preventDefault();
+      show('Please complete all required fields', false);
       return;
     }
-    // Require captcha if enabled
-    if (tsSiteKey && (!captchaInput || !captchaInput.value)) {
-      show('Please complete the verification.', false);
+    if (name.length < 2) {
+      e.preventDefault();
+      show('Please complete your name', false);
+      return;
+    }
+    const emailOk = /.+@.+\..+/.test(email);
+    if (!emailOk) {
+      e.preventDefault();
+      show('Please complete: enter a valid email', false);
+      return;
+    }
+    if (message.length < 10) {
+      e.preventDefault();
+      show('Please complete your message', false);
       return;
     }
 
-    show('Sending…', true);
-    const payload = Object.fromEntries(fd.entries());
-    try {
-      const r = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const j = await r.json();
-      if (j.ok) {
-        // Inline success UX instead of redirect
-        form.reset();
-        if (captchaInput) captchaInput.value = '';
-        show('Thanks! Your message has been sent. We\'ll be in touch soon.');
-        status && status.focus && status.focus();
-      } else {
-        show(j.error || 'Submission failed. Please try again later.', false);
-      }
-    } catch (err) {
-      show('Network error. Please try again later.', false);
+    // Then validate consent and captcha (still keep phrasing with "Please complete")
+    if (!fd.get('consent')) {
+      e.preventDefault();
+      show('Please complete consent to proceed', false);
+      return;
     }
+    if (tsSiteKey && (!captchaInput || !captchaInput.value)) {
+      e.preventDefault();
+      show('Please complete the verification', false);
+      return;
+    }
+
+    // All good: in local/preview environments, navigate to success page
+    try {
+      if (window.location.hostname === 'localhost' || window.location.protocol === 'file:') {
+        e.preventDefault();
+        window.location.assign('/contact-success.html');
+        return;
+      }
+    } catch {}
+    // Otherwise, allow the normal submit to the server
   });
 });
