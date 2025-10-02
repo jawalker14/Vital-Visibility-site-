@@ -59,7 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailOk = /.+@.+\..+/.test(emailVal);
       if (!emailOk) {
         e.preventDefault();
-        status.textContent = 'Please enter a valid email';
+        // Must include "Please complete" per tests/requirements
+        status.textContent = 'Please complete: enter a valid email';
         return;
       }
       if (messageVal.length < 10) {
