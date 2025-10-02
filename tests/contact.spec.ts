@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('contact form client validation', async ({ page }) => {
-  await page.goto('/contact');
+  await page.goto('/contact.html');
   await page.getByRole('button', { name: 'Send Message' }).click();
   await expect(page.locator('#form-status')).toContainText('Please complete');
 

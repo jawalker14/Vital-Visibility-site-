@@ -11,6 +11,11 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         contactSuccess: resolve(__dirname, 'contact-success.html'),
+  // Root pages with explicit .html routes
+  about: resolve(__dirname, 'about.html'),
+  contact: resolve(__dirname, 'contact.html'),
+  services: resolve(__dirname, 'services.html'),
+  pricing: resolve(__dirname, 'pricing.html'),
   // Use directory index pages for primary sections
   aboutIndex: resolve(__dirname, 'about/index.html'),
   contactIndex: resolve(__dirname, 'contact/index.html'),

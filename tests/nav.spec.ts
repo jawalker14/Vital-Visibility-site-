@@ -3,11 +3,11 @@ import { test, expect } from '@playwright/test';
 test('nav links resolve without 404', async ({ page }) => {
   await page.goto('/');
   const links = [
-    '/',
-    '/services',
-    '/pricing',
-    '/about',
-    '/contact'
+  '/index.html',
+  '/services.html',
+  '/pricing.html',
+  '/about.html',
+  '/contact.html'
   ];
   for (const href of links) {
     const res = await page.goto(href);
