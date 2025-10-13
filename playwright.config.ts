@@ -10,7 +10,7 @@ export default defineConfig({
   },
   webServer: [
     {
-      command: 'vite build && vite preview --port 5173',
+      command: 'npm run build && node scripts/preview.mjs',
       port: 5173,
       reuseExistingServer: !process.env.CI
     }

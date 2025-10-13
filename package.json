@@ -10,7 +10,7 @@
     "test:e2e": "playwright test",
     "audit:lighthouse": "node ./scripts/lighthouse.mjs",
     "start": "vite",
-    "build": "vite build && cp -R css js images dist/",
+  "build": "rm -rf dist && mkdir -p dist && cp -R css js images about contact services pricing resources *.html dist/",
     "preview": "vite preview --port 5173"
   },
   "devDependencies": {

@@ -11,23 +11,74 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Mark active nav link with aria-current
-  const links = document.querySelectorAll('.site-nav a');
-  const norm = (s) => {
-    if (!s) return '';
-    try {
-      const u = new URL(s, window.location.origin);
-      let p = u.pathname;
-      if (p.length > 1 && p.endsWith('/')) p = p.slice(0, -1);
-      return p;
-    } catch { return s; }
-  };
-  const path = norm(window.location.pathname);
-  links.forEach((a) => {
-    const href = a.getAttribute('href');
-    if (!href) return;
-    const hp = norm(href);
-    if (path === hp) a.setAttribute('aria-current', 'page');
-  });
+  (function activateNav() {
+    const path = location.pathname.replace(/\/$/, '');
+    const htmlPath = path.endsWith('.html') ? path : `${path}.html`;
+    const candidates = new Set([path || '/index.html', htmlPath, '/index.html']);
+    document.querySelectorAll('#site-nav a[href]').forEach((a) => {
+      try {
+        const href = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/$/, '');
+        if (candidates.has(href)) {
+          a.classList.add('is-active');
+          a.setAttribute('aria-current', 'page');
+        } else {
+          a.removeAttribute('aria-current');
+          a.classList.remove('is-active');
+        }
+      } catch (_) { /* ignore invalid URLs */ }
+    });
+  })();
+
+  // Accessible mobile menu with minimal focus trap
+  (function mobileMenu() {
+    const toggle = document.getElementById('menu-toggle');
+    const panel = document.getElementById('menu-panel');
+    if (!toggle || !panel) return;
+
+    const getFocusable = () => panel.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+
+    function onKeyDown(e) {
+      if (e.key === 'Escape') { closeMenu(); return; }
+      if (e.key !== 'Tab') return;
+      const f = Array.from(getFocusable());
+      if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+
+    function openMenu() {
+      panel.hidden = false;
+      toggle.setAttribute('aria-expanded', 'true');
+      const focusables = getFocusable();
+      (focusables[0] || panel).focus();
+      document.addEventListener('keydown', onKeyDown);
+    }
+
+    function closeMenu() {
+      panel.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+      document.removeEventListener('keydown', onKeyDown);
+    }
+
+    toggle.addEventListener('click', () => (panel.hidden ? openMenu() : closeMenu()));
+    document.addEventListener('click', (e) => {
+      if (!panel.hidden && !panel.contains(e.target) && e.target !== toggle) closeMenu();
+    });
+  })();
+
+  // Skip-to-content: programmatically focus main
+  (function skipToContent() {
+    const main = document.getElementById('main');
+    if (!main) return;
+    document.querySelectorAll('a.skip-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        main.setAttribute('tabindex', '-1');
+        main.focus();
+      });
+    });
+  })();
 
   // Contact form client-side validation/status handling
   const form = document.querySelector('#contact-form');
