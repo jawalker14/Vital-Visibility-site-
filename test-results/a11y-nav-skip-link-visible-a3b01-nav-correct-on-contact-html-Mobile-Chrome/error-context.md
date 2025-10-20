@@ -1,0 +1,143 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Vital Visibility logo" [ref=e5] [cursor=pointer]:
+        - /url: /index.html
+        - img "Vital Visibility logo" [ref=e6] [cursor=pointer]
+      - navigation "Primary" [ref=e7]:
+        - button "Toggle navigation" [ref=e8] [cursor=pointer]: ☰
+      - link "WhatsApp" [ref=e9] [cursor=pointer]:
+        - /url: https://wa.me/27810958672
+  - generic [ref=e11]:
+    - heading "Contact Us" [level=1] [ref=e12]
+    - paragraph [ref=e13]: We’d love to hear from you. Send us a message and we’ll get back to you soon.
+  - main [ref=e14]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - heading "Get in Touch" [level=2] [ref=e18]
+        - paragraph [ref=e19]: Please fill out the form below to book a strategy call or send us a message. We’ll respond as quickly as possible.
+        - paragraph [ref=e20]: If you prefer, you can also reach us by email or phone.
+        - list [ref=e21]:
+          - listitem [ref=e22]:
+            - strong [ref=e23]: "Email:"
+            - link "jack@vitalvisibility.co.za" [ref=e24] [cursor=pointer]:
+              - /url: mailto:jack@vitalvisibility.co.za
+          - listitem [ref=e25]:
+            - strong [ref=e26]: "Phone:"
+            - link "+27 81 095 8672" [ref=e27] [cursor=pointer]:
+              - /url: tel:+27810958672
+          - listitem [ref=e28]:
+            - strong [ref=e29]: "WhatsApp:"
+            - link "Send a message" [ref=e30] [cursor=pointer]:
+              - /url: https://wa.me/27810958672
+          - listitem [ref=e31]:
+            - strong [ref=e32]: "Office hours:"
+            - text: Mon–Fri 08:00–17:00
+        - paragraph [ref=e33]:
+          - text: "POPIA: We collect only the information necessary to respond to your enquiry. By submitting this form you consent to our"
+          - link "Privacy Policy" [ref=e34] [cursor=pointer]:
+            - /url: /privacy.html
+          - text: . You may request data removal at any time.
+      - generic [ref=e37]:
+        - generic [ref=e38]: Name
+        - textbox "Name" [ref=e39]
+        - generic [ref=e40]: Email
+        - textbox "Email" [ref=e41]
+        - generic [ref=e42]: Phone (optional)
+        - textbox "Phone (optional)" [ref=e43]
+        - generic [ref=e44]: Message
+        - textbox "Message" [ref=e45]
+        - generic [ref=e46]:
+          - checkbox "I consent to the processing of my information for the purpose of this enquiry and agree to the Privacy Policy." [ref=e47]
+          - generic [ref=e48]:
+            - text: I consent to the processing of my information for the purpose of this enquiry and agree to the
+            - link "Privacy Policy" [ref=e49] [cursor=pointer]:
+              - /url: /privacy.html
+            - text: .
+        - status
+        - button "Send Message" [ref=e50]
+  - contentinfo [ref=e51]:
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - img "Vital Visibility logo" [ref=e54]
+        - paragraph [ref=e55]: AI‑powered digital marketing for South African healthcare professionals.
+      - generic [ref=e56]:
+        - heading "Links" [level=4] [ref=e57]
+        - list [ref=e58]:
+          - listitem [ref=e59]:
+            - link "Home" [ref=e60] [cursor=pointer]:
+              - /url: /index.html
+          - listitem [ref=e61]:
+            - link "Services" [ref=e62] [cursor=pointer]:
+              - /url: /services.html
+          - listitem [ref=e63]:
+            - link "Pricing" [ref=e64] [cursor=pointer]:
+              - /url: /pricing.html
+          - listitem [ref=e65]:
+            - link "Websites" [ref=e66] [cursor=pointer]:
+              - /url: /services/websites.html
+          - listitem [ref=e67]:
+            - link "Maintenance" [ref=e68] [cursor=pointer]:
+              - /url: /services/maintenance.html
+          - listitem [ref=e69]:
+            - link "Google Ads" [ref=e70] [cursor=pointer]:
+              - /url: /services/google-ads.html
+          - listitem [ref=e71]:
+            - link "Meta Ads" [ref=e72] [cursor=pointer]:
+              - /url: /services/meta-ads.html
+          - listitem [ref=e73]:
+            - link "Meta Content" [ref=e74] [cursor=pointer]:
+              - /url: /services/meta-content.html
+          - listitem [ref=e75]:
+            - link "Branding" [ref=e76] [cursor=pointer]:
+              - /url: /services/branding.html
+          - listitem [ref=e77]:
+            - link "Logo" [ref=e78] [cursor=pointer]:
+              - /url: /services/logo.html
+          - listitem [ref=e79]:
+            - link "About" [ref=e80] [cursor=pointer]:
+              - /url: /about.html
+          - listitem [ref=e81]:
+            - link "Contact" [ref=e82] [cursor=pointer]:
+              - /url: /contact.html
+      - generic [ref=e83]:
+        - heading "Contact" [level=4] [ref=e84]
+        - paragraph [ref=e85]:
+          - text: "Email:"
+          - link "jack@vitalvisibility.co.za" [ref=e86] [cursor=pointer]:
+            - /url: mailto:jack@vitalvisibility.co.za
+        - paragraph [ref=e87]:
+          - text: "Phone:"
+          - link "+27 81 095 8672" [ref=e88] [cursor=pointer]:
+            - /url: tel:+27810958672
+        - paragraph [ref=e89]:
+          - text: "WhatsApp:"
+          - link "Send a message" [ref=e90] [cursor=pointer]:
+            - /url: https://wa.me/27810958672
+        - paragraph [ref=e91]: "Company Reg #: 2025/626274/07"
+    - generic [ref=e92]:
+      - paragraph [ref=e93]: © 2025 Vital Visibility (Pty) Ltd. All rights reserved. We align all messaging with HPCSA Ethical Rules; no testimonials or inducements appear on this site.
+      - paragraph [ref=e94]:
+        - link "Privacy Policy" [ref=e95] [cursor=pointer]:
+          - /url: /privacy.html
+        - text: ·
+        - link "Terms of Service" [ref=e96] [cursor=pointer]:
+          - /url: /terms.html
+        - text: ·
+        - link "POPIA" [ref=e97] [cursor=pointer]:
+          - /url: /contact.html#popia
+  - generic [ref=e99]:
+    - generic [ref=e100]:
+      - text: We use optional analytics to improve the site. Consent to enable. See our
+      - link "Privacy Policy" [ref=e101] [cursor=pointer]:
+        - /url: /privacy.html
+      - text: .
+    - generic [ref=e102]:
+      - button "Accept" [ref=e103] [cursor=pointer]
+      - button "Decline" [ref=e104] [cursor=pointer]
+```

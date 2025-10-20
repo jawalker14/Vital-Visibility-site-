@@ -34,15 +34,7 @@ body {
   outline-offset: 2px;
 }
 
-.skip-link {
-  position: static;
-  display: inline-block;
-  padding: 0.5rem 0.75rem;
-  background: var(--color-navy);
-  color: var(--color-white);
-  text-decoration: none;
-  border-radius: 4px;
-}
+.skip-link { position: static; display: inline-block; padding: 0.5rem 0.75rem; background: var(--color-navy); color: var(--color-white); text-decoration: none; border-radius: 4px; }
 
 a {
   color: var(--color-navy);
@@ -108,12 +100,7 @@ img {
 }
 
 /* Active nav using aria-current or helper class */
-#site-nav a[aria-current="page"],
-#site-nav a.is-active {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-  font-weight: 600;
-}
+#site-nav a[aria-current="page"], #site-nav a.is-active { text-decoration: underline; text-underline-offset: 0.2em; font-weight: 600; }
 
 /* Mobile menu panel visibility */
 #menu-panel[hidden] { display: none; }
