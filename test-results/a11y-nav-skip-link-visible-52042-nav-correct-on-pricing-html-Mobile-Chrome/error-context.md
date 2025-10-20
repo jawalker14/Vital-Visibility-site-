@@ -1,0 +1,418 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Vital Visibility logo" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Vital Visibility logo" [ref=e6] [cursor=pointer]
+      - navigation "Primary" [ref=e7]:
+        - button "Toggle navigation" [ref=e8] [cursor=pointer]: ☰
+      - link "WhatsApp" [ref=e9] [cursor=pointer]:
+        - /url: https://wa.me/27810958672
+  - generic [ref=e11]:
+    - heading "Pricing" [level=1] [ref=e12]
+    - paragraph [ref=e13]: Transparent, no-fuss packages to launch and grow your healthcare practice.
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - paragraph [ref=e17]: All packages are billed monthly in South African Rand (ZAR). No VAT is charged during our launch phase. Cancel any time with one month’s notice.
+      - generic [ref=e18]:
+        - heading "Website Packages" [level=2] [ref=e19]
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - heading "Basic" [level=3] [ref=e22]
+            - paragraph [ref=e23]: R5,000
+            - list [ref=e24]:
+              - listitem [ref=e25]: 1–4 pages (Home, About, Contact, Services)
+              - listitem [ref=e26]: Responsive design & SSL
+              - listitem [ref=e27]: Basic branding integration
+              - listitem [ref=e28]: Contact form & Google Map embed
+              - listitem [ref=e29]: HPCSA‑aligned layout & basic SEO
+              - listitem [ref=e30]: 1 revision · 7–10 business days
+            - link "What’s included" [ref=e31] [cursor=pointer]:
+              - /url: /services/websites.html
+          - generic [ref=e32]:
+            - heading "Standard" [level=3] [ref=e33]
+            - paragraph [ref=e34]: R11,000
+            - list [ref=e35]:
+              - listitem [ref=e36]: 5–7 pages & custom layout
+              - listitem [ref=e37]: Booking form & WhatsApp button
+              - listitem [ref=e38]: Maps with schema & keyword SEO
+              - listitem [ref=e39]: Content assistance (≤500 words/page)
+              - listitem [ref=e40]: GA4 & Search Console setup (IDs later)
+              - listitem [ref=e41]: 2 revisions · 10–14 business days
+            - link "What’s included" [ref=e42] [cursor=pointer]:
+              - /url: /services/websites.html
+          - generic [ref=e43]:
+            - heading "Advanced" [level=3] [ref=e44]
+            - paragraph [ref=e45]: R21,000
+            - list [ref=e46]:
+              - listitem [ref=e47]: 8–12 pages & pro UX/UI animations
+              - listitem [ref=e48]: Full copywriting & optional live chat
+              - listitem [ref=e49]: Core Web Vitals optimisation & advanced SEO
+              - listitem [ref=e50]: Conversion tracking (Meta Pixel, GA) (IDs later)
+              - listitem [ref=e51]: Blog setup + 2 articles & legal pages
+              - listitem [ref=e52]: 3 revisions · 14–20 business days
+            - link "What’s included" [ref=e53] [cursor=pointer]:
+              - /url: /services/websites.html
+          - generic [ref=e54]:
+            - heading "Expert" [level=3] [ref=e55]
+            - paragraph [ref=e56]: R28,000
+            - list [ref=e57]:
+              - listitem [ref=e58]: 12–18 pages & bespoke design
+              - listitem [ref=e59]: Appointments & automation (email/SMS)
+              - listitem [ref=e60]: Patient portal integration
+              - listitem [ref=e61]: Advanced blog strategy + 3 articles
+              - listitem [ref=e62]: Speed, accessibility & UX optimisation
+              - listitem [ref=e63]: Unlimited revisions (30 days) · 21–30 days
+            - link "What’s included" [ref=e64] [cursor=pointer]:
+              - /url: /services/websites.html
+      - generic [ref=e65]:
+        - heading "Maintenance Packages" [level=2] [ref=e66]
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - heading "Basic" [level=3] [ref=e69]
+            - paragraph [ref=e70]: R1,000/mo
+            - list [ref=e71]:
+              - listitem [ref=e72]: Monthly health check & bi‑monthly speed optimisation
+              - listitem [ref=e73]: CMS/plugin updates & security monitoring
+              - listitem [ref=e74]: Monthly backups
+              - listitem [ref=e75]: 30 min text updates
+              - listitem [ref=e76]: Email support (48–72h response)
+            - link "What’s included" [ref=e77] [cursor=pointer]:
+              - /url: /services/maintenance.html
+          - generic [ref=e78]:
+            - heading "Standard" [level=3] [ref=e79]
+            - paragraph [ref=e80]: R3,000/mo
+            - list [ref=e81]:
+              - listitem [ref=e82]: Fortnightly backups & monthly speed optimisation
+              - listitem [ref=e83]: 2h content edits
+              - listitem [ref=e84]: Uptime monitoring & monthly performance report
+              - listitem [ref=e85]: Priority email support (24–48h)
+            - link "What’s included" [ref=e86] [cursor=pointer]:
+              - /url: /services/maintenance.html
+          - generic [ref=e87]:
+            - heading "Advanced" [level=3] [ref=e88]
+            - paragraph [ref=e89]: R5,000/mo
+            - list [ref=e90]:
+              - listitem [ref=e91]: Weekly backups & 5h content edits
+              - listitem [ref=e92]: On‑page SEO maintenance & analytics tweaks
+              - listitem [ref=e93]: CRO suggestions & broken link fixes
+              - listitem [ref=e94]: 2 stock images per month
+              - listitem [ref=e95]: 24h response time
+            - link "What’s included" [ref=e96] [cursor=pointer]:
+              - /url: /services/maintenance.html
+          - generic [ref=e97]:
+            - heading "Expert" [level=3] [ref=e98]
+            - paragraph [ref=e99]: R9,000/mo
+            - list [ref=e100]:
+              - listitem [ref=e101]: Daily backups (30‑day retention)
+              - listitem [ref=e102]: Unlimited content updates & monthly strategy call
+              - listitem [ref=e103]: A/B testing & quarterly SEO audit
+              - listitem [ref=e104]: Structured data updates & 3 graphics/mo
+              - listitem [ref=e105]: Priority task queue ≤ 3 business days
+            - link "What’s included" [ref=e106] [cursor=pointer]:
+              - /url: /services/maintenance.html
+      - generic [ref=e107]:
+        - heading "Google Ads Packages" [level=2] [ref=e108]
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - heading "Setup (once‑off)" [level=3] [ref=e111]
+            - paragraph [ref=e112]: R4,000
+            - list [ref=e113]:
+              - listitem [ref=e114]: Goals workshop & keyword research (~50)
+              - listitem [ref=e115]: Competitor benchmarking & campaign structure
+              - listitem [ref=e116]: Ad groups & copy (≥2×2)
+              - listitem [ref=e117]: Geo, language & audience targeting
+              - listitem [ref=e118]: Conversion tracking & GA/GTM (IDs later)
+              - listitem [ref=e119]: Account linking & handover doc
+            - link "What’s included" [ref=e120] [cursor=pointer]:
+              - /url: /services/google-ads.html
+          - generic [ref=e121]:
+            - heading "Basic" [level=3] [ref=e122]
+            - paragraph [ref=e123]: R999/mo
+            - list [ref=e124]:
+              - listitem [ref=e125]: Manage 1 campaign (Search/Local) up to R10k spend
+              - listitem [ref=e126]: Monthly review & keyword tuning
+              - listitem [ref=e127]: 1 ad‑group update & conversion check
+              - listitem [ref=e128]: Email support; excludes new landing pages
+            - link "What’s included" [ref=e129] [cursor=pointer]:
+              - /url: /services/google-ads.html
+          - generic [ref=e130]:
+            - heading "Standard" [level=3] [ref=e131]
+            - paragraph [ref=e132]: R2,700/mo
+            - list [ref=e133]:
+              - listitem [ref=e134]: Up to 2 campaigns & spend ≤R15k
+              - listitem [ref=e135]: Weekly optimisation & copy updates (2×/mo)
+              - listitem [ref=e136]: A/B tests & monthly PDF report
+              - listitem [ref=e137]: Retargeting (on request) & keyword expansion
+              - listitem [ref=e138]: Phone + email support
+            - link "What’s included" [ref=e139] [cursor=pointer]:
+              - /url: /services/google-ads.html
+          - generic [ref=e140]:
+            - heading "Advanced" [level=3] [ref=e141]
+            - paragraph [ref=e142]: R3,500/mo
+            - list [ref=e143]:
+              - listitem [ref=e144]: Up to 4 campaigns incl. retargeting; spend ≤R40k
+              - listitem [ref=e145]: Full‑funnel strategy & advanced segmentation
+              - listitem [ref=e146]: Landing audit & CRO recommendations
+              - listitem [ref=e147]: Real‑time Looker Studio dashboard & bi‑weekly calls
+              - listitem [ref=e148]: Competitor ad tracking & custom banners (1×/mo)
+              - listitem [ref=e149]: Priority support
+            - link "What’s included" [ref=e150] [cursor=pointer]:
+              - /url: /services/google-ads.html
+      - generic [ref=e151]:
+        - heading "Meta Ads Packages" [level=2] [ref=e152]
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - heading "Setup (once‑off)" [level=3] [ref=e155]
+            - paragraph [ref=e156]: R5,000
+            - list [ref=e157]:
+              - listitem [ref=e158]: Business Manager & Ad Account setup
+              - listitem [ref=e159]: Pixel & CAPI install (IDs later)
+              - listitem [ref=e160]: Custom & lookalike audiences
+              - listitem [ref=e161]: Strategy session & copy/design for ≤3 ads
+              - listitem [ref=e162]: Funnel mapping & landing review/CRO tips
+              - listitem [ref=e163]: HPCSA compliance check; 5–7 working days
+            - link "What’s included" [ref=e164] [cursor=pointer]:
+              - /url: /services/meta-ads.html
+          - generic [ref=e165]:
+            - heading "Basic" [level=3] [ref=e166]
+            - paragraph [ref=e167]: R1,200/mo
+            - list [ref=e168]:
+              - listitem [ref=e169]: 1 campaign (Traffic/Engagement/Messages)
+              - listitem [ref=e170]: ≤2 ad sets & ≤2 creatives
+              - listitem [ref=e171]: Basic monthly report
+              - listitem [ref=e172]: Spend ≤R5k; minor creative refreshes
+            - link "What’s included" [ref=e173] [cursor=pointer]:
+              - /url: /services/meta-ads.html
+          - generic [ref=e174]:
+            - heading "Standard" [level=3] [ref=e175]
+            - paragraph [ref=e176]: R3,000/mo
+            - list [ref=e177]:
+              - listitem [ref=e178]: Up to 2 campaigns (Awareness & Leads)
+              - listitem [ref=e179]: 3–4 ad sets & 4 creatives
+              - listitem [ref=e180]: Retargeting & A/B testing
+              - listitem [ref=e181]: Mid‑month & monthly reviews; basic comments monitoring
+              - listitem [ref=e182]: Spend ≤R15k; monthly strategy tweaks
+            - link "What’s included" [ref=e183] [cursor=pointer]:
+              - /url: /services/meta-ads.html
+          - generic [ref=e184]:
+            - heading "Advanced" [level=3] [ref=e185]
+            - paragraph [ref=e186]: R5,000/mo
+            - list [ref=e187]:
+              - listitem [ref=e188]: 3–4 campaigns (Awareness/Traffic/Retargeting/Leads)
+              - listitem [ref=e189]: 5–6 ad sets & 6–8 creatives incl. short‑form video
+              - listitem [ref=e190]: Full‑funnel retargeting & lead form/CRM support
+              - listitem [ref=e191]: Bi‑weekly reports & full comments handling
+              - listitem [ref=e192]: Unlimited creative refreshes & dedicated account manager
+              - listitem [ref=e193]: Spend ≤R40k; monthly strategy call
+            - link "What’s included" [ref=e194] [cursor=pointer]:
+              - /url: /services/meta-ads.html
+      - generic [ref=e195]:
+        - heading "Meta Content Packages" [level=2] [ref=e196]
+        - generic [ref=e197]:
+          - generic [ref=e198]:
+            - heading "Basic" [level=3] [ref=e199]
+            - paragraph [ref=e200]: R4,000
+            - list [ref=e201]:
+              - listitem [ref=e202]: 2 short‑form video scripts (15–30s)
+              - listitem [ref=e203]: Monthly posting schedule
+              - listitem [ref=e204]: Basic camera & lighting guide
+              - listitem [ref=e205]: 1 revision
+            - link "What’s included" [ref=e206] [cursor=pointer]:
+              - /url: /services/meta-content.html
+          - generic [ref=e207]:
+            - heading "Standard" [level=3] [ref=e208]
+            - paragraph [ref=e209]: R5,600
+            - list [ref=e210]:
+              - listitem [ref=e211]: 4 scripts (15–45s)
+              - listitem [ref=e212]: "Detailed monthly calendar: days, times, hashtags & hooks"
+              - listitem [ref=e213]: Enhanced lighting & framing guide
+              - listitem [ref=e214]: 2 revisions
+            - link "What’s included" [ref=e215] [cursor=pointer]:
+              - /url: /services/meta-content.html
+          - generic [ref=e216]:
+            - heading "Advanced" [level=3] [ref=e217]
+            - paragraph [ref=e218]: R8,000
+            - list [ref=e219]:
+              - listitem [ref=e220]: 8 scripts (15–60s) aligned to goals
+              - listitem [ref=e221]: 4‑week daily plan & SEO‑friendly captions
+              - listitem [ref=e222]: Custom visual brief & storyboard notes
+              - listitem [ref=e223]: Up to 3 script revisions
+            - link "What’s included" [ref=e224] [cursor=pointer]:
+              - /url: /services/meta-content.html
+          - generic [ref=e225]:
+            - heading "Expert" [level=3] [ref=e226]
+            - paragraph [ref=e227]: R10,000
+            - list [ref=e228]:
+              - listitem [ref=e229]: 12 tailored scripts (15–90s) & 6‑week plan with repurposing
+              - listitem [ref=e230]: Advanced lighting & equipment guide
+              - listitem [ref=e231]: Storyboard visuals (top 4) & unlimited revisions (30 days)
+              - listitem [ref=e232]: 1:1 strategy session (30 min)
+            - link "What’s included" [ref=e233] [cursor=pointer]:
+              - /url: /services/meta-content.html
+      - generic [ref=e234]:
+        - heading "Branding Packages" [level=2] [ref=e235]
+        - generic [ref=e236]:
+          - generic [ref=e237]:
+            - heading "Basic" [level=3] [ref=e238]
+            - paragraph [ref=e239]: R4,000
+            - list [ref=e240]:
+              - listitem [ref=e241]: 1 logo concept + 1 revision
+              - listitem [ref=e242]: 3–4 colour palette & typography pairing
+              - listitem [ref=e243]: Simple style guide (PDF)
+              - listitem [ref=e244]: Social profile branding (FB cover + IG template)
+            - link "What’s included" [ref=e245] [cursor=pointer]:
+              - /url: /services/branding.html
+          - generic [ref=e246]:
+            - heading "Standard" [level=3] [ref=e247]
+            - paragraph [ref=e248]: R9,000
+            - list [ref=e249]:
+              - listitem [ref=e250]: 2 logo concepts + up to 2 revisions
+              - listitem [ref=e251]: Expanded palette & typography system
+              - listitem [ref=e252]: Style guide (usage, spacing, tone of voice)
+              - listitem [ref=e253]: Social kit (2 post templates + FB cover + IG highlights)
+              - listitem [ref=e254]: Business card design
+            - link "What’s included" [ref=e255] [cursor=pointer]:
+              - /url: /services/branding.html
+          - generic [ref=e256]:
+            - heading "Advanced" [level=3] [ref=e257]
+            - paragraph [ref=e258]: R14,000
+            - list [ref=e259]:
+              - listitem [ref=e260]: 3 logo concepts + unlimited revisions (reasonable)
+              - listitem [ref=e261]: Full identity system (colours, fonts, patterns, icons)
+              - listitem [ref=e262]: Comprehensive brand guidelines (personality, tone)
+              - listitem [ref=e263]: Pro social kit (5 templates + story templates + highlights)
+              - listitem [ref=e264]: Stationery suite & mood board
+            - link "What’s included" [ref=e265] [cursor=pointer]:
+              - /url: /services/branding.html
+          - generic [ref=e266]:
+            - heading "Expert" [level=3] [ref=e267]
+            - paragraph [ref=e268]: R19,000
+            - list [ref=e269]:
+              - listitem [ref=e270]: Everything in Advanced
+              - listitem [ref=e271]: Discovery workshop & tagline creation
+              - listitem [ref=e272]: Animated logo (5–10s) & signage mockups
+              - listitem [ref=e273]: HTML email signature & brand launch kit
+              - listitem [ref=e274]: 1‑month consultation (weekly check‑ins)
+            - link "What’s included" [ref=e275] [cursor=pointer]:
+              - /url: /services/branding.html
+      - generic [ref=e276]:
+        - heading "Logo Packages" [level=2] [ref=e277]
+        - generic [ref=e278]:
+          - generic [ref=e279]:
+            - heading "Still" [level=3] [ref=e280]
+            - paragraph [ref=e281]: R2,000
+            - list [ref=e282]:
+              - listitem [ref=e283]: Discovery & SA competitor analysis
+              - listitem [ref=e284]: 2–3 original concepts
+              - listitem [ref=e285]: 3 revision rounds
+              - listitem [ref=e286]: "Deliverables: PNG/JPG/SVG/PDF + variations"
+              - listitem [ref=e287]: Mini style guide & full commercial rights
+            - link "What’s included" [ref=e288] [cursor=pointer]:
+              - /url: /services/logo.html
+          - generic [ref=e289]:
+            - heading "Still + Animated" [level=3] [ref=e290]
+            - paragraph [ref=e291]: R2,500
+            - list [ref=e292]:
+              - listitem [ref=e293]: Everything in Still package
+              - listitem [ref=e294]: 1 professional animation (MP4/MOV/GIF)
+              - listitem [ref=e295]: Transparent animation if applicable
+              - listitem [ref=e296]: 1–2 animation tweak rounds
+              - listitem [ref=e297]: Usage suggestions & guidance
+            - link "What’s included" [ref=e298] [cursor=pointer]:
+              - /url: /services/logo.html
+      - generic [ref=e299]:
+        - heading "Need Something Custom?" [level=2] [ref=e300]
+        - paragraph [ref=e301]: We create custom solutions for specialists, multi-location practices and hospitals. Book a strategy call to scope your requirements.
+        - link "Book a Strategy Call" [ref=e302] [cursor=pointer]:
+          - /url: https://calendly.com
+      - generic [ref=e303]:
+        - heading "FAQs" [level=2] [ref=e304]
+        - group [ref=e305]
+        - group [ref=e307]
+        - group [ref=e309]
+  - contentinfo [ref=e311]:
+    - generic [ref=e312]:
+      - generic [ref=e313]:
+        - img "Vital Visibility logo" [ref=e314]
+        - paragraph [ref=e315]: AI‑powered digital marketing for South African healthcare professionals.
+      - generic [ref=e316]:
+        - heading "Links" [level=4] [ref=e317]
+        - list [ref=e318]:
+          - listitem [ref=e319]:
+            - link "Home" [ref=e320] [cursor=pointer]:
+              - /url: /index.html
+          - listitem [ref=e321]:
+            - link "Services" [ref=e322] [cursor=pointer]:
+              - /url: /services.html
+          - listitem [ref=e323]:
+            - link "Pricing" [ref=e324] [cursor=pointer]:
+              - /url: /pricing.html
+          - listitem [ref=e325]:
+            - link "Websites" [ref=e326] [cursor=pointer]:
+              - /url: /services/websites.html
+          - listitem [ref=e327]:
+            - link "Maintenance" [ref=e328] [cursor=pointer]:
+              - /url: /services/maintenance.html
+          - listitem [ref=e329]:
+            - link "Google Ads" [ref=e330] [cursor=pointer]:
+              - /url: /services/google-ads.html
+          - listitem [ref=e331]:
+            - link "Meta Ads" [ref=e332] [cursor=pointer]:
+              - /url: /services/meta-ads.html
+          - listitem [ref=e333]:
+            - link "Meta Content" [ref=e334] [cursor=pointer]:
+              - /url: /services/meta-content.html
+          - listitem [ref=e335]:
+            - link "Branding" [ref=e336] [cursor=pointer]:
+              - /url: /services/branding.html
+          - listitem [ref=e337]:
+            - link "Logo" [ref=e338] [cursor=pointer]:
+              - /url: /services/logo.html
+          - listitem [ref=e339]:
+            - link "About" [ref=e340] [cursor=pointer]:
+              - /url: /about.html
+          - listitem [ref=e341]:
+            - link "Contact" [ref=e342] [cursor=pointer]:
+              - /url: /contact.html
+      - generic [ref=e343]:
+        - heading "Contact" [level=4] [ref=e344]
+        - paragraph [ref=e345]:
+          - text: "Email:"
+          - link "jack@vitalvisibility.co.za" [ref=e346] [cursor=pointer]:
+            - /url: mailto:jack@vitalvisibility.co.za
+        - paragraph [ref=e347]:
+          - text: "Phone:"
+          - link "+27 81 095 8672" [ref=e348] [cursor=pointer]:
+            - /url: tel:+27810958672
+        - paragraph [ref=e349]:
+          - text: "WhatsApp:"
+          - link "Send a message" [ref=e350] [cursor=pointer]:
+            - /url: https://wa.me/27810958672
+        - paragraph [ref=e351]: "Company Reg #: 2025/626274/07"
+    - generic [ref=e352]:
+      - paragraph [ref=e353]: © 2025 Vital Visibility (Pty) Ltd. All rights reserved. We align all messaging with HPCSA Ethical Rules; no testimonials or inducements appear on this site.
+      - paragraph [ref=e354]:
+        - link "Privacy Policy" [ref=e355] [cursor=pointer]:
+          - /url: /privacy.html
+        - text: ·
+        - link "Terms of Service" [ref=e356] [cursor=pointer]:
+          - /url: /terms.html
+        - text: ·
+        - link "POPIA" [ref=e357] [cursor=pointer]:
+          - /url: /contact.html#popia
+  - generic [ref=e359]:
+    - generic [ref=e360]:
+      - text: We use optional analytics to improve the site. Consent to enable. See our
+      - link "Privacy Policy" [ref=e361] [cursor=pointer]:
+        - /url: /privacy.html
+      - text: .
+    - generic [ref=e362]:
+      - button "Accept" [ref=e363] [cursor=pointer]
+      - button "Decline" [ref=e364] [cursor=pointer]
+```

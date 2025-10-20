@@ -15,7 +15,7 @@
     { "source": "/services/meta-ads", "destination": "/services/meta-ads.html", "permanent": true },
     { "source": "/services/meta-content", "destination": "/services/meta-content.html", "permanent": true },
     { "source": "/services/branding", "destination": "/services/branding.html", "permanent": true },
-    { "source": "/services/logo", "destination": "/services/logo.html", "permanent": true },
-    { "source": "/:page/", "destination": "/:page.html", "permanent": true }
+  { "source": "/services/logo", "destination": "/services/logo.html", "permanent": true },
+  { "source": "/:page/", "destination": "/:page.html", "permanent": true }
   ]
 }

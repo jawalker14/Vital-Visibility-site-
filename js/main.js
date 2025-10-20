@@ -1,14 +1,5 @@
-// Navigation toggle for mobile menu
+// Navigation behaviors and a11y enhancements
 document.addEventListener('DOMContentLoaded', () => {
-  const navToggle = document.querySelector('.nav-toggle');
-  const navList = document.querySelector('.nav-list');
-  if (navToggle && navList) {
-    navToggle.setAttribute('aria-expanded', 'false');
-    navToggle.addEventListener('click', () => {
-      const open = navList.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', String(open));
-    });
-  }
 
   // Mark active nav link with aria-current
   (function activateNav() {
@@ -37,6 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getFocusable = () => panel.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
 
+    // Ensure sensible initial state on small screens
+    try {
+      const toggleVisible = getComputedStyle(toggle).display !== 'none';
+      if (toggleVisible) panel.hidden = true;
+    } catch {}
+
     function onKeyDown(e) {
       if (e.key === 'Escape') { closeMenu(); return; }
       if (e.key !== 'Tab') return;
@@ -49,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openMenu() {
       panel.hidden = false;
+  panel.classList.add('open');
       toggle.setAttribute('aria-expanded', 'true');
       const focusables = getFocusable();
       (focusables[0] || panel).focus();
@@ -57,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeMenu() {
       panel.hidden = true;
+  panel.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
       toggle.focus();
       document.removeEventListener('keydown', onKeyDown);

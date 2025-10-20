@@ -1,0 +1,138 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Vital Visibility logo" [ref=e5] [cursor=pointer]:
+        - /url: /index.html
+        - img "Vital Visibility logo" [ref=e6] [cursor=pointer]
+      - navigation "Primary" [ref=e7]:
+        - button "Toggle navigation" [ref=e8] [cursor=pointer]: ☰
+      - link "WhatsApp" [ref=e9] [cursor=pointer]:
+        - /url: https://wa.me/27810958672
+  - main [ref=e10]:
+    - generic [ref=e12]:
+      - heading "Our Services" [level=1] [ref=e13]
+      - paragraph [ref=e14]: Your one-stop solution for ethical and effective healthcare marketing.
+    - generic [ref=e16]:
+      - heading "What We Offer" [level=2] [ref=e17]
+      - paragraph [ref=e18]: From websites to full-funnel marketing, we have a plan for every practice.
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - heading "Websites" [level=3] [ref=e21]
+          - paragraph [ref=e22]: Conversion‑ready, HPCSA-aligned sites built for trust and speed.
+          - link "View packages →" [ref=e23] [cursor=pointer]:
+            - /url: /services/websites.html
+        - generic [ref=e24]:
+          - heading "Maintenance" [level=3] [ref=e25]
+          - paragraph [ref=e26]: Secure, fast and compliant updates to keep your site running smoothly.
+          - link "View packages →" [ref=e27] [cursor=pointer]:
+            - /url: /services/maintenance.html
+        - generic [ref=e28]:
+          - heading "Google Ads" [level=3] [ref=e29]
+          - paragraph [ref=e30]: Ethical patient acquisition through goal-driven search advertising.
+          - link "View packages →" [ref=e31] [cursor=pointer]:
+            - /url: /services/google-ads.html
+        - generic [ref=e32]:
+          - heading "Meta Ads" [level=3] [ref=e33]
+          - paragraph [ref=e34]: Awareness, engagement & leads across Facebook and Instagram.
+          - link "View packages →" [ref=e35] [cursor=pointer]:
+            - /url: /services/meta-ads.html
+        - generic [ref=e36]:
+          - heading "Content & Social" [level=3] [ref=e37]
+          - paragraph [ref=e38]: Authority-building blog posts, articles and compliant social content.
+          - link "View packages →" [ref=e39] [cursor=pointer]:
+            - /url: /services/meta-content.html
+        - generic [ref=e40]:
+          - heading "Branding & Logo" [level=3] [ref=e41]
+          - paragraph [ref=e42]: Professional identity systems that inspire trust and credibility.
+          - link "View packages →" [ref=e43] [cursor=pointer]:
+            - /url: /services/logo.html
+    - generic [ref=e45]:
+      - heading "Ready to grow your practice?" [level=2] [ref=e46]
+      - paragraph [ref=e47]: Book a strategy call and we’ll map out a tailored marketing plan aligned with HPCSA and POPIA guidelines.
+      - link "Book a Strategy Call" [ref=e48] [cursor=pointer]:
+        - /url: https://calendly.com
+  - contentinfo [ref=e49]:
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - img "Vital Visibility logo" [ref=e52]
+        - paragraph [ref=e53]: AI‑powered digital marketing for South African healthcare professionals.
+      - generic [ref=e54]:
+        - heading "Links" [level=4] [ref=e55]
+        - list [ref=e56]:
+          - listitem [ref=e57]:
+            - link "Home" [ref=e58] [cursor=pointer]:
+              - /url: /index.html
+          - listitem [ref=e59]:
+            - link "Services" [ref=e60] [cursor=pointer]:
+              - /url: /services.html
+          - listitem [ref=e61]:
+            - link "Pricing" [ref=e62] [cursor=pointer]:
+              - /url: /pricing.html
+          - listitem [ref=e63]:
+            - link "Websites" [ref=e64] [cursor=pointer]:
+              - /url: /services/websites.html
+          - listitem [ref=e65]:
+            - link "Maintenance" [ref=e66] [cursor=pointer]:
+              - /url: /services/maintenance.html
+          - listitem [ref=e67]:
+            - link "Google Ads" [ref=e68] [cursor=pointer]:
+              - /url: /services/google-ads.html
+          - listitem [ref=e69]:
+            - link "Meta Ads" [ref=e70] [cursor=pointer]:
+              - /url: /services/meta-ads.html
+          - listitem [ref=e71]:
+            - link "Meta Content" [ref=e72] [cursor=pointer]:
+              - /url: /services/meta-content.html
+          - listitem [ref=e73]:
+            - link "Branding" [ref=e74] [cursor=pointer]:
+              - /url: /services/branding.html
+          - listitem [ref=e75]:
+            - link "Logo" [ref=e76] [cursor=pointer]:
+              - /url: /services/logo.html
+          - listitem [ref=e77]:
+            - link "About" [ref=e78] [cursor=pointer]:
+              - /url: /about.html
+          - listitem [ref=e79]:
+            - link "Contact" [ref=e80] [cursor=pointer]:
+              - /url: /contact.html
+      - generic [ref=e81]:
+        - heading "Contact" [level=4] [ref=e82]
+        - paragraph [ref=e83]:
+          - text: "Email:"
+          - link "jack@vitalvisibility.co.za" [ref=e84] [cursor=pointer]:
+            - /url: mailto:jack@vitalvisibility.co.za
+        - paragraph [ref=e85]:
+          - text: "Phone:"
+          - link "+27 81 095 8672" [ref=e86] [cursor=pointer]:
+            - /url: tel:+27810958672
+        - paragraph [ref=e87]:
+          - text: "WhatsApp:"
+          - link "Send a message" [ref=e88] [cursor=pointer]:
+            - /url: https://wa.me/27810958672
+        - paragraph [ref=e89]: "Company Reg #: 2025/626274/07"
+    - generic [ref=e90]:
+      - paragraph [ref=e91]: © 2025 Vital Visibility (Pty) Ltd. All rights reserved. We align all messaging with HPCSA Ethical Rules; no testimonials or inducements appear on this site.
+      - paragraph [ref=e92]:
+        - link "Privacy Policy" [ref=e93] [cursor=pointer]:
+          - /url: privacy.html
+        - text: ·
+        - link "Terms of Service" [ref=e94] [cursor=pointer]:
+          - /url: terms.html
+        - text: ·
+        - link "POPIA" [ref=e95] [cursor=pointer]:
+          - /url: contact.html#popia
+  - generic [ref=e97]:
+    - generic [ref=e98]:
+      - text: We use optional analytics to improve the site. Consent to enable. See our
+      - link "Privacy Policy" [ref=e99] [cursor=pointer]:
+        - /url: /privacy.html
+      - text: .
+    - generic [ref=e100]:
+      - button "Accept" [ref=e101] [cursor=pointer]
+      - button "Decline" [ref=e102] [cursor=pointer]
+```
