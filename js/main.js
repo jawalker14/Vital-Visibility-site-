@@ -132,3 +132,34 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Consent banner & GA opt-in logic is in js/consent.js
+
+(function() {
+  // Sticky header
+  const header = document.querySelector('header');
+  const cta = document.querySelector('.header-cta'); // add this class to the main header button
+  let last = 0;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY || 0;
+    if (y > 80 && !header.classList.contains('is-sticky')) header.classList.add('is-sticky');
+    if (y <= 80 && header.classList.contains('is-sticky')) header.classList.remove('is-sticky');
+    last = y;
+  });
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+
+  // Active nav state based on hash
+  function setActive() {
+    const hash = location.hash;
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    if (hash) document.querySelectorAll(`nav a[href='${hash}']`).forEach(a => a.classList.add('active'));
+  }
+  window.addEventListener('hashchange', setActive);
+  setActive();
+})();
