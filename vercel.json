@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [],
+  "redirects": [
+    { "source": "/pricing", "destination": "/pricing", "permanent": false },
+    { "source": "/contact", "destination": "/contact", "permanent": false }
+  ],
   "headers": []
 }
