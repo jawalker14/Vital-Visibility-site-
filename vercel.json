@@ -1,18 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    { "source": "/pricing", "destination": "/pricing.html", "permanent": false },
-    { "source": "/contact", "destination": "/contact.html", "permanent": false },
-    { "source": "/privacy", "destination": "/privacy.html", "permanent": false }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)\\.html",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
-      ]
-    }
-  ],
-  "error": { "status": 404, "path": "404.html" }
+  "redirects": [],
+  "headers": []
 }
