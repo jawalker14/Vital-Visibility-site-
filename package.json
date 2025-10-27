@@ -4,14 +4,15 @@
   "private": true,
   "description": "Marketing site for South African healthcare professionals.",
   "scripts": {
-    "lint": "eslint . && stylelint '**/*.{css,scss}' && htmlhint '**/*.html'",
-  "audit:links": "node ./scripts/audit-links.mjs",
-    "format": "prettier -w .",
-    "test:e2e": "playwright test",
-    "audit:lighthouse": "node ./scripts/lighthouse.mjs",
-    "start": "vite",
-  "build": "rm -rf dist && mkdir -p dist && cp -R css js images about contact services pricing resources *.html dist/",
-    "preview": "vite preview --port 5173"
+  "lint": "eslint . && stylelint '**/*.{css,scss}' && htmlhint '**/*.html'",
+  "audit:links": "node scripts/audit-links.mjs",
+  "format": "prettier -w .",
+  "test:e2e": "playwright test",
+  "audit:lighthouse": "node ./scripts/lighthouse.mjs",
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "preview:links": "node scripts/preview.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
