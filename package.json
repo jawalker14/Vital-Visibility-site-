@@ -5,15 +5,17 @@
   "type": "module",
   "description": "Marketing site for South African healthcare professionals.",
   "scripts": {
-  "lint": "eslint . && stylelint '**/*.{css,scss}' && htmlhint '**/*.html'",
-  "audit:links": "node scripts/audit-links.mjs",
-  "format": "prettier -w .",
-  "test:e2e": "playwright test",
-  "audit:lighthouse": "node ./scripts/lighthouse.mjs",
-  "dev": "vite",
+    "lint": "eslint . && stylelint '**/*.{css,scss}' && htmlhint '**/*.html'",
+    "audit:links": "node scripts/audit-links.mjs",
+  "optimize:images": "node scripts/optimize-images.mjs",
+    "format": "prettier -w .",
+    "test:e2e": "playwright test",
+    "audit:lighthouse": "node ./scripts/lighthouse.mjs",
+    "dev": "vite",
+  "prebuild": "npm run optimize:images",
   "build": "vite build",
-  "preview": "vite preview",
-  "preview:links": "node scripts/preview.mjs"
+    "preview": "vite preview",
+    "preview:links": "node scripts/preview.mjs"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -28,6 +30,7 @@
     "lighthouse": "^11.0.0",
     "playwright": "^1.55.0",
     "prettier": "^3.0.0",
+    "sharp": "^0.34.4",
     "stylelint": "^15.10.0",
     "stylelint-config-standard": "^33.0.0",
     "vite": "^5.0.0"

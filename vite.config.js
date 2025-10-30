@@ -1,5 +1,10 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+// Ensure __dirname is available in ESM context
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Configure Vite to build a multi-page static site.
 // Each HTML page is an entry so it gets emitted to dist/.
@@ -18,8 +23,6 @@ export default defineConfig({
   pricing: resolve(__dirname, 'pricing.html'),
   // Use directory index pages for primary sections
   aboutIndex: resolve(__dirname, 'about/index.html'),
-  contactIndex: resolve(__dirname, 'contact/index.html'),
-  pricingIndex: resolve(__dirname, 'pricing/index.html'),
         privacy: resolve(__dirname, 'privacy.html'),
         terms: resolve(__dirname, 'terms.html'),
         servicesIndex: resolve(__dirname, 'services/index.html'),
