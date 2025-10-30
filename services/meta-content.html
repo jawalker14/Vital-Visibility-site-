@@ -18,7 +18,12 @@
   <!-- Header / Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-  <a href="../index.html" class="logo-link"><img src="../images/vital_visibility_logo.png" alt="Vital Visibility logo" class="logo" width="1024" height="1024"></a>
+  <a href="../index.html" class="logo-link">
+    <picture>
+      <source srcset="../images/vital_visibility_logo.webp" type="image/webp" />
+      <img src="../images/vital_visibility_logo.png" alt="Vital Visibility logo" class="logo" width="1024" height="1024" />
+    </picture>
+  </a>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-controls="menu-panel" aria-expanded="false">☰</button>
         <ul class="nav-list" id="menu-panel">
@@ -44,63 +49,15 @@
   <!-- Packages Section -->
   <main id="main" class="service-detail">
     <div class="container">
-      <h2>Meta Content Packages</h2>
-      <p class="section-lead">Engage your audience with compelling video scripts and posting schedules.</p>
-      <div class="package-grid">
-        <!-- Basic -->
-        <div class="package-card">
-          <h3>Basic</h3>
-          <p class="price">R4,000</p>
-          <ul>
-            <li>2 short‑form video scripts (15–30s)</li>
-            <li>Monthly posting schedule</li>
-            <li>Basic camera & lighting guide</li>
-            <li>1 revision</li>
-          </ul>
-          <div class="package-cta"><a href="../pricing.html">See Pricing Details</a></div>
-        </div>
-        <!-- Standard -->
-        <div class="package-card">
-          <h3>Standard</h3>
-          <p class="price">R5,600</p>
-          <ul>
-            <li>4 scripts (15–45s)</li>
-            <li>Detailed monthly calendar: days, times, hashtags & hooks</li>
-            <li>Enhanced lighting & framing guide</li>
-            <li>2 revisions</li>
-          </ul>
-          <div class="package-cta"><a href="../pricing.html">See Pricing Details</a></div>
-        </div>
-        <!-- Advanced -->
-        <div class="package-card">
-          <h3>Advanced</h3>
-          <p class="price">R8,000</p>
-          <ul>
-            <li>8 scripts (15–60s) aligned to goals</li>
-            <li>4‑week daily plan & SEO‑friendly captions</li>
-            <li>Custom visual brief & storyboard notes</li>
-            <li>Up to 3 script revisions</li>
-          </ul>
-          <div class="package-cta"><a href="../pricing.html">See Pricing Details</a></div>
-        </div>
-        <!-- Expert -->
-        <div class="package-card">
-          <h3>Expert</h3>
-          <p class="price">R10,000</p>
-          <ul>
-            <li>12 tailored scripts (15–90s) & 6‑week plan with repurposing</li>
-            <li>Advanced lighting & equipment guide</li>
-            <li>Storyboard visuals (top 4) & unlimited revisions (30 days)</li>
-            <li>1:1 strategy session (30 min)</li>
-          </ul>
-          <div class="package-cta"><a href="../pricing.html">See Pricing Details</a></div>
-        </div>
-      </div>
-      <div class="final-cta final-cta--navy rounded">
-        <h3>Ready to stand out on social media?</h3>
-        <p>Our content packages will boost your engagement and reach.</p>
-        <a href="https://calendly.com" class="btn-primary" target="_blank" rel="noopener">Book a Strategy Call</a>
-      </div>
+      <section aria-labelledby="outcomes">
+        <h2 id="outcomes">What you get</h2>
+        <ul>
+          <li>HPCSA-safe content plan aligned to your practice</li>
+          <li>Scheduling & on-brand creative aligned to your logo and palette</li>
+          <li>Tracking from day one (GA4, pixel setup as applicable)</li>
+        </ul>
+        <p><a class="btn" href="/pricing.html#meta-ads">See packages & pricing</a></p>
+      </section>
     </div>
   </main>
 
@@ -108,7 +65,10 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-left">
-  <img src="../images/vital_visibility_logo.png" alt="Vital Visibility logo" class="footer-logo" loading="lazy" width="1024" height="1024">
+  <picture>
+    <source srcset="../images/vital_visibility_logo.webp" type="image/webp" />
+    <img src="../images/vital_visibility_logo.png" alt="Vital Visibility logo" class="footer-logo" loading="lazy" width="1024" height="1024" />
+  </picture>
         <p>AI‑powered digital marketing for South African healthcare professionals.</p>
       </div>
       <div class="footer-links">
@@ -141,12 +101,12 @@
       <p class="legal-links">
     <a href="../privacy.html">Privacy Policy</a> ·
     <a href="../terms.html">Terms of Service</a> ·
-  <a href="../contact.html#popia">POPIA</a>
+  <a href="../privacy.html#popia">POPIA</a>
       </p>
     </div>
   </footer>
-  <script src="../js/main.js"></script>
-  <script src="../js/consent.js"></script>
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/consent.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -157,7 +117,16 @@
     "sameAs": []
   }
   </script>
-  <script src="../js/consent.js"></script>
-  <script type="application/ld+json" src="../js/org.jsonld"></script>
+  <script type="module" src="../js/consent.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Vital Visibility",
+    "url": "https://vitalvisibility.co.za/",
+    "logo": "https://vitalvisibility.co.za/images/vital_visibility_logo.png",
+    "sameAs": []
+  }
+  </script>
 </body>
 </html>

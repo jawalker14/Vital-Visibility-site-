@@ -13,13 +13,36 @@
   <meta name="ga-id" content="">
   <title>Privacy Policy | Vital Visibility</title>
   <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"How do you handle cookies and analytics?",
+        "acceptedAnswer":{"@type":"Answer","text":"We only load non-essential analytics after you accept via our cookie banner. You can update preferences anytime."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do you comply with POPIA?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes — we follow POPIA requirements including consent for direct marketing and data minimization."}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <!-- Header / Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-  <a href="/index.html" class="logo-link"><img src="/images/vital_visibility_logo.png" alt="Vital Visibility logo" class="logo" width="1024" height="1024"></a>
+  <a href="/index.html" class="logo-link">
+    <picture>
+      <source srcset="/images/vital_visibility_logo.webp" type="image/webp" />
+      <img src="/images/vital_visibility_logo.png" alt="Vital Visibility logo" class="logo" width="1024" height="1024" />
+    </picture>
+  </a>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-controls="menu-panel" aria-expanded="false">☰</button>
         <ul class="nav-list" id="menu-panel">
@@ -62,9 +85,10 @@
       </ul>
       <h2>Data Retention</h2>
       <p>We retain personal data only for as long as necessary to fulfil the purposes outlined in this policy or as required by law. If you would like us to delete your data, please contact us using the details below.</p>
-      <h2>Cookies and Analytics</h2>
-      <p>We use cookies and similar technologies to collect anonymous usage statistics and to improve your experience. Non‑essential cookies are disabled by default until you provide consent via our cookie banner.</p>
-      <h2>Your Rights</h2>
+  <h2>Cookies and Analytics</h2>
+  <p>We use cookies and similar technologies to collect anonymous usage statistics and to improve your experience. Non‑essential cookies are disabled by default until you provide consent via our cookie banner. You can update consent anytime via ‘Cookie Preferences’ at the bottom of the page.</p>
+  <h2 id="popia">POPIA Notice</h2>
+  <h2>Your Rights</h2>
       <p>You have the right to request access to the personal data we hold about you, request corrections, or request deletion. To exercise these rights, please contact us at <a href="mailto:jack@vitalvisibility.co.za">jack@vitalvisibility.co.za</a>.</p>
       <h2>Contact Us</h2>
       <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
@@ -78,7 +102,10 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-left">
-  <img src="/images/vital_visibility_logo.png" alt="Vital Visibility logo" class="footer-logo" loading="lazy" width="1024" height="1024">
+  <picture>
+    <source srcset="/images/vital_visibility_logo.webp" type="image/webp" />
+    <img src="/images/vital_visibility_logo.png" alt="Vital Visibility logo" class="footer-logo" loading="lazy" width="1024" height="1024" />
+  </picture>
         <p>AI‑powered digital marketing for South African healthcare professionals.</p>
       </div>
       <div class="footer-links">
@@ -111,12 +138,12 @@
       <p class="legal-links">
     <a href="/privacy.html">Privacy Policy</a> ·
     <a href="/terms.html">Terms of Service</a> ·
-  <a href="/contact.html#popia">POPIA</a>
+  <a href="/privacy.html#popia">POPIA</a>
       </p>
     </div>
   </footer>
-  <script src="/js/main.js"></script>
-  <script src="/js/consent.js"></script>
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/consent.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

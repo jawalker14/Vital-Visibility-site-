@@ -1,21 +1,48 @@
 {
   "cleanUrls": false,
   "trailingSlash": false,
-  "redirects": [
-    { "source": "/services", "destination": "/services.html", "permanent": true },
-    { "source": "/pricing", "destination": "/pricing.html", "permanent": true },
-    { "source": "/privacy", "destination": "/privacy.html", "permanent": true },
-    { "source": "/terms", "destination": "/terms.html", "permanent": true },
-    { "source": "/about", "destination": "/about.html", "permanent": true },
-    { "source": "/contact", "destination": "/contact.html", "permanent": true },
-    { "source": "/resources", "destination": "/resources/index.html", "permanent": true },
-    { "source": "/services/websites", "destination": "/services/websites.html", "permanent": true },
-    { "source": "/services/maintenance", "destination": "/services/maintenance.html", "permanent": true },
-    { "source": "/services/google-ads", "destination": "/services/google-ads.html", "permanent": true },
-    { "source": "/services/meta-ads", "destination": "/services/meta-ads.html", "permanent": true },
-    { "source": "/services/meta-content", "destination": "/services/meta-content.html", "permanent": true },
-    { "source": "/services/branding", "destination": "/services/branding.html", "permanent": true },
-  { "source": "/services/logo", "destination": "/services/logo.html", "permanent": true },
-  { "source": "/:page/", "destination": "/:page.html", "permanent": true }
-  ]
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/about/", "destination": "/about/index.html" },
+
+    { "source": "/resources", "destination": "/resources/index.html" },
+    { "source": "/resources/", "destination": "/resources/index.html" },
+
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/services/", "destination": "/services/index.html" },
+    { "source": "/services/branding", "destination": "/services/branding.html" },
+    { "source": "/services/branding/", "destination": "/services/branding.html" },
+    { "source": "/services/google-ads", "destination": "/services/google-ads.html" },
+    { "source": "/services/google-ads/", "destination": "/services/google-ads.html" },
+    { "source": "/services/logo", "destination": "/services/logo.html" },
+    { "source": "/services/logo/", "destination": "/services/logo.html" },
+    { "source": "/services/maintenance", "destination": "/services/maintenance.html" },
+    { "source": "/services/maintenance/", "destination": "/services/maintenance.html" },
+    { "source": "/services/meta-ads", "destination": "/services/meta-ads.html" },
+    { "source": "/services/meta-ads/", "destination": "/services/meta-ads.html" },
+    { "source": "/services/meta-content", "destination": "/services/meta-content.html" },
+    { "source": "/services/meta-content/", "destination": "/services/meta-content.html" },
+    { "source": "/services/websites", "destination": "/services/websites.html" },
+    { "source": "/services/websites/", "destination": "/services/websites.html" },
+
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/contact/", "destination": "/contact.html" },
+    { "source": "/contact-success", "destination": "/contact-success.html" },
+    { "source": "/contact-success/", "destination": "/contact-success.html" },
+
+    { "source": "/pricing", "destination": "/pricing.html" },
+    { "source": "/pricing/", "destination": "/pricing.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/privacy/", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/terms/", "destination": "/terms.html" },
+
+    { "source": "/maintenance", "destination": "/maintenance.html" },
+    { "source": "/maintenance/", "destination": "/maintenance.html" },
+
+    { "source": "/404", "destination": "/404.html" }
+  ],
+  "headers": []
 }

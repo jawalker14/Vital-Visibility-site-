@@ -17,6 +17,21 @@
   <meta name="twitter:description" content="AI‑powered digital marketing for South African healthcare professionals.">
   <meta name="ga-id" content="">
   <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Vital Visibility (Pty) Ltd",
+    "url": "https://vitalvisibility.co.za/",
+    "logo": "https://vitalvisibility.co.za/assets/logo.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/vital-visibility-pty-ltd/",
+      "https://www.instagram.com/vitalvisibilityptyltd/"
+    ],
+    "areaServed": "ZA",
+    "description": "Compliance-first digital marketing for South African healthcare practices (HPCSA & POPIA aware)."
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -24,7 +39,10 @@
   <header class="site-header">
     <div class="container nav-container">
   <a href="/index.html" class="logo-link">
-        <img src="/images/vital_visibility_logo.png" alt="Vital Visibility logo" class="logo" width="1024" height="1024">
+        <picture>
+          <source srcset="/images/vital_visibility_logo.webp" type="image/webp" />
+          <img src="/images/vital_visibility_logo.png" alt="Vital Visibility logo" class="logo" width="1024" height="1024" />
+        </picture>
       </a>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-controls="menu-panel" aria-expanded="false">☰</button>
@@ -45,12 +63,22 @@
   <section class="hero">
     <div class="container hero-content">
       <h1>Digital growth for South African healthcare professionals.</h1>
+  <p class="subhead" style="margin-top:8px;font-weight:600;color:#3B556B;">Built for SA practices — HPCSA aligned</p>
       <p>Websites, Google & Meta Ads, Branding, and compliant content — AI‑powered, ethical, and built for patient trust.</p>
       <div class="hero-cta">
         <a href="https://calendly.com" class="btn-primary" target="_blank" rel="noopener">Book a Strategy Call</a>
   <a href="/pricing.html" class="btn-secondary">See Pricing</a>
       </div>
     </div>
+  </section>
+
+  <section id="who-we-help" style="margin:32px 0;border-top:1px solid #eee;padding-top:24px;">
+    <h2 style="font-size:1.125rem;margin:0 0 12px 0;color:#27287B;">Who we help</h2>
+    <ul style="display:flex;gap:16px;flex-wrap:wrap;list-style:none;padding:0;margin:0;">
+      <li><a href="/services.html#gps" style="text-decoration:none;">GPs</a></li>
+      <li><a href="/services.html#specialists" style="text-decoration:none;">Specialists</a></li>
+      <li><a href="/services.html#allied" style="text-decoration:none;">Allied Health</a></li>
+    </ul>
   </section>
 
   <!-- Services Overview Section -->
@@ -169,7 +197,10 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-left">
-        <img src="/images/vital_visibility_logo.png" alt="Vital Visibility logo" class="footer-logo" loading="lazy" width="1024" height="1024">
+        <picture>
+          <source srcset="/images/vital_visibility_logo.webp" type="image/webp" />
+          <img src="/images/vital_visibility_logo.png" alt="Vital Visibility logo" class="footer-logo" loading="lazy" width="1024" height="1024" />
+        </picture>
         <p>AI‑powered digital marketing for South African healthcare professionals.</p>
       </div>
       <div class="footer-links">
@@ -202,13 +233,13 @@
       <p class="legal-links">
   <a href="/privacy.html">Privacy Policy</a> ·
   <a href="/terms.html">Terms of Service</a> ·
-  <a href="/contact.html#popia">POPIA</a>
+  <a href="/privacy.html#popia">POPIA</a>
       </p>
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
-  <script src="/js/consent.js"></script>
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/consent.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

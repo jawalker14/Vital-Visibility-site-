@@ -19,7 +19,12 @@
   <!-- Header / Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-  <a href="/" class="logo-link"><img src="/images/vital_visibility_logo.png" alt="Vital Visibility logo" class="logo" width="1024" height="1024"></a>
+  <a href="/" class="logo-link">
+    <picture>
+      <source srcset="/images/vital_visibility_logo.webp" type="image/webp" />
+      <img src="/images/vital_visibility_logo.png" alt="Vital Visibility logo" class="logo" width="1024" height="1024" />
+    </picture>
+  </a>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-controls="menu-panel" aria-expanded="false">☰</button>
         <ul class="nav-list" id="menu-panel">
@@ -38,6 +43,43 @@
   <section class="hero">
     <div class="container hero-content">
       <h1>Pricing</h1>
+      <section id="quick-compare" style="margin:24px 0;">
+        <h2 style="font-size:1.125rem;margin:0 0 12px 0;color:#27287B;">Quick compare</h2>
+        <table style="width:100%;border-collapse:collapse;">
+          <thead>
+            <tr>
+              <th style="text-align:left;border-bottom:1px solid #eee;padding:8px;">Plan</th>
+              <th style="text-align:left;border-bottom:1px solid #eee;padding:8px;">Best for</th>
+              <th style="text-align:left;border-bottom:1px solid #eee;padding:8px;">Core outcomes</th>
+              <th style="text-align:left;border-bottom:1px solid #eee;padding:8px;">Turnaround</th>
+              <th style="text-align:left;border-bottom:1px solid #eee;padding:8px;">From</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:8px;"><a href="#websites">Websites</a></td>
+              <td style="padding:8px;">New/refresh sites</td>
+              <td style="padding:8px;">Modern site, tracking, fast load</td>
+              <td style="padding:8px;">~1–3 weeks</td>
+              <td style="padding:8px;">R …</td>
+            </tr>
+            <tr>
+              <td style="padding:8px;"><a href="#meta-ads">Meta Ads</a></td>
+              <td style="padding:8px;">Awareness & bookings</td>
+              <td style="padding:8px;">HPCSA-safe creative + lead flow</td>
+              <td style="padding:8px;">Launch in 5–7 days</td>
+              <td style="padding:8px;">R … /mo</td>
+            </tr>
+            <tr>
+              <td style="padding:8px;"><a href="#google-ads">Google Ads</a></td>
+              <td style="padding:8px;">High-intent leads</td>
+              <td style="padding:8px;">Keyword strategy + conversion setup</td>
+              <td style="padding:8px;">Launch in 5–7 days</td>
+              <td style="padding:8px;">R … /mo</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
       <p>Transparent, no-fuss packages to launch and grow your healthcare practice.</p>
     </div>
   </section>
@@ -45,11 +87,11 @@
   <main id="main" class="pricing-page">
     <div class="container">
       <section class="pricing-intro">
-        <p>All packages are billed monthly in South African Rand (ZAR). No VAT is charged during our launch phase. Cancel any time with one month’s notice.</p>
+  <p>All packages are billed monthly in South African Rand (ZAR). Intro pricing: no VAT charged during the initial launch phase (valid until further notice). Cancel any time with one month’s notice.</p>
       </section>
 
       <!-- Website Packages -->
-      <section class="pricing-group">
+  <section id="websites" class="pricing-group">
         <h2>Website Packages</h2>
         <div class="package-grid">
           <div class="package-card">
@@ -73,7 +115,7 @@
               <li>Booking form & WhatsApp button</li>
               <li>Maps with schema & keyword SEO</li>
               <li>Content assistance (≤500 words/page)</li>
-              <li>GA4 & Search Console setup (IDs later)</li>
+              <li>GA4 & Search Console setup. We set up Google Analytics 4 and Search Console on your properties.</li>
               <li>2 revisions · 10–14 business days</li>
             </ul>
             <a href="/services/websites.html" class="btn-secondary">What’s included</a>
@@ -85,7 +127,7 @@
               <li>8–12 pages & pro UX/UI animations</li>
               <li>Full copywriting & optional live chat</li>
               <li>Core Web Vitals optimisation & advanced SEO</li>
-              <li>Conversion tracking (Meta Pixel, GA) (IDs later)</li>
+              <li>Conversion tracking (Meta Pixel, GA). We set up Google Analytics 4 and Search Console on your properties.</li>
               <li>Blog setup + 2 articles & legal pages</li>
               <li>3 revisions · 14–20 business days</li>
             </ul>
@@ -107,8 +149,8 @@
         </div>
       </section>
 
-      <!-- Maintenance Packages -->
-      <section class="pricing-group">
+  <!-- Maintenance Packages -->
+  <section id="maintenance" class="pricing-group">
         <h2>Maintenance Packages</h2>
         <div class="package-grid">
           <div class="package-card">
@@ -162,7 +204,7 @@
       </section>
 
       <!-- Google Ads Packages -->
-      <section class="pricing-group">
+  <section id="google-ads" class="pricing-group">
         <h2>Google Ads Packages</h2>
         <div class="package-grid">
           <div class="package-card">
@@ -173,7 +215,7 @@
               <li>Competitor benchmarking & campaign structure</li>
               <li>Ad groups & copy (≥2×2)</li>
               <li>Geo, language & audience targeting</li>
-              <li>Conversion tracking & GA/GTM (IDs later)</li>
+              <li>Conversion tracking & GA/GTM. We set up Google Analytics 4 and Search Console on your properties.</li>
               <li>Account linking & handover doc</li>
             </ul>
             <a href="/services/google-ads.html" class="btn-secondary">What’s included</a>
@@ -218,7 +260,7 @@
       </section>
 
       <!-- Meta Ads Packages -->
-      <section class="pricing-group">
+  <section id="meta-ads" class="pricing-group">
         <h2>Meta Ads Packages</h2>
         <div class="package-grid">
           <div class="package-card">
@@ -226,7 +268,7 @@
             <p class="price">R5,000</p>
             <ul>
               <li>Business Manager & Ad Account setup</li>
-              <li>Pixel & CAPI install (IDs later)</li>
+              <li>Pixel & CAPI install. We set up Google Analytics 4 and Search Console on your properties.</li>
               <li>Custom & lookalike audiences</li>
               <li>Strategy session & copy/design for ≤3 ads</li>
               <li>Funnel mapping & landing review/CRO tips</li>
@@ -273,8 +315,8 @@
         </div>
       </section>
 
-      <!-- Meta Content Packages -->
-      <section class="pricing-group">
+  <!-- Meta Content Packages -->
+  <section id="meta-content" class="pricing-group">
         <h2>Meta Content Packages</h2>
         <div class="package-grid">
           <div class="package-card">
@@ -324,8 +366,8 @@
         </div>
       </section>
 
-      <!-- Branding Packages -->
-      <section class="pricing-group">
+  <!-- Branding Packages -->
+  <section id="branding" class="pricing-group">
         <h2>Branding Packages</h2>
         <div class="package-grid">
           <div class="package-card">
@@ -378,8 +420,8 @@
         </div>
       </section>
 
-      <!-- Logo Packages -->
-      <section class="pricing-group">
+  <!-- Logo Packages -->
+  <section id="logo" class="pricing-group">
         <h2>Logo Packages</h2>
         <div class="package-grid">
           <div class="package-card">
@@ -437,7 +479,10 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-left">
-        <img src="/images/vital_visibility_logo.png" alt="Vital Visibility logo" class="footer-logo" loading="lazy" width="1024" height="1024">
+        <picture>
+          <source srcset="/images/vital_visibility_logo.webp" type="image/webp" />
+          <img src="/images/vital_visibility_logo.png" alt="Vital Visibility logo" class="footer-logo" loading="lazy" width="1024" height="1024" />
+        </picture>
         <p>AI‑powered digital marketing for South African healthcare professionals.</p>
       </div>
       <div class="footer-links">
@@ -470,12 +515,21 @@
       <p class="legal-links">
         <a href="/privacy.html">Privacy Policy</a> ·
         <a href="/terms.html">Terms of Service</a> ·
-  <a href="/contact.html#popia">POPIA</a>
+  <a href="/privacy.html#popia">POPIA</a>
       </p>
     </div>
   </footer>
-  <script src="/js/main.js"></script>
-  <script src="/js/consent.js"></script>
-  <script type="application/ld+json" src="/js/org.jsonld"></script>
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/consent.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Vital Visibility",
+    "url": "https://vitalvisibility.co.za/",
+    "logo": "https://vitalvisibility.co.za/images/vital_visibility_logo.png",
+    "sameAs": []
+  }
+  </script>
 </body>
 </html>
